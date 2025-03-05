@@ -1,46 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="font-haus text-6xl/[64px]">I don’t just <span class="italic text-green-600">manage</span> your social <br> media presence, I <span class="italic color:rgba(0, 176, 29, 1)">write</span> too</div>
-  <!-- Your content here -->
-  <div class="card bg-base-100 w-96 shadow-xl">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
-  </figure>
-  <div class="card-body">
-    <div>
-      {{date}}
+  <div class="relative p-12">
+    <div class="static font-lato text-4xl">I don’t just <span class="italic text-green-600">manage</span> your social <br> media presence, I <span class="italic text-green-600">write</span> too</div>
+    <!-- Your content here -->
+    <div class="grid grid-cols-6 gap-8 py-12">
+      <div class="static col-span-4">
+        <h2 class="py-4">Read my latest blog posts</h2>
+        <div class="card bg-base-100 w-96 shadow-xl ">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div>
+              {{date}}
+            </div>
+            <h2 class="card-title">
+              {{title}}
+              <div class="badge badge-secondary">NEW</div>
+            </h2>
+            <p>{{body}}</p>
+    
+            <div class="card-actions justify-end">
+              <div class="left-0">Read Article <span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="static col-span-2">
+        <h2 class="py-4">Top categories</h2>
+      </div>
     </div>
-    <h2 class="card-title">
-      {{title}}
-      <div class="badge badge-secondary">NEW</div>
-    </h2>
-    <p>{{body}}</p>
-
-    <div class="card-actions justify-end">
-      <div class="">Read Article <span></span></div>
-    <div/>
+    <div class="static font-lato text-4xl">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
+    <div class="space-x-2"><input class="border-b-4 pt-12" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>    
   </div>
-</div>
+  
 {% endblock %}
-
-/* I don’t just manage your social media presence, I write too */
-
-position: absolute;
-width: 894px;
-height: 158px;
-left: 60px;
-top: 213px;
-
-font-family: 'At Hauss Std';
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 123%;
-/* or 79px */
-
-color: #000000;
-
 

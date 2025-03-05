@@ -4,9 +4,11 @@ module.exports = {
             "./blog/templates/**/*.{html,js}",
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      haus: ['At Hauss', 'sans-serif'],
+    extend: {
+      fontFamily: {
+        haus: ['At Hauss', 'sans-serif'],
+        lato: ['Lato', 'sans-serif']
+      },
     },
   },
   plugins: [require('daisyui'),],
