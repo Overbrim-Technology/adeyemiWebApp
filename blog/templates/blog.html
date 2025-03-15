@@ -3,38 +3,55 @@
 {% block content %}
   <div class="relative p-12">
     <div class="static font-lato text-4xl">I don’t just <span class="italic text-green-600">manage</span> your social <br> media presence, I <span class="italic text-green-600">write</span> too</div>
-    <!-- Your content here -->
+    <!-- blog related content here -->
     <div class="grid grid-cols-6 gap-8 py-12">
+
+      <!-- blog posts -->
       <div class="static col-span-4">
         <h2 class="py-4">Read my latest blog posts</h2>
-        <div class="card bg-base-100 w-96 shadow-xl ">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes" />
-          </figure>
-          <div class="card-body">
-            <div>
-              {{date}}
+        <div class="row grid grid-cols-2">
+          {% for blog_post in blog_posts %}
+            <div class="card bg-base-100 w-96 shadow-sm">
+              <figure>
+                <img
+                  src="{{blog_post.image}}"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <div>
+                  {{blog_post.created}}
+                </div>
+                <h2 class="card-title">
+                  {{blog_post.title}}
+                  <div class="badge badge-secondary">NEW</div>
+                </h2>
+                <p>{{blog_post.body | truncatewords:15}}</p>
+                <div class="card-actions justify-end">
+                  <div class="left-100"> Read Article </div>
+                  <a class="left-0 hover:text-green-600" href=" "> &rarr; <span></span></a>
+                </div>
+              </div>
             </div>
-            <h2 class="card-title">
-              {{title}}
-              <div class="badge badge-secondary">NEW</div>
-            </h2>
-            <p>{{body}}</p>
-    
-            <div class="card-actions justify-end">
-              <div class="left-0">Read Article <span></span></div>
-            </div>
-          </div>
+            {% if forloop.counter|divisibleby:2 and not forloop.last %}
+
+            {% endif %}
+          {% endfor %}
         </div>
-      </div>
+      </div>  
+
+      <!-- blog categories -->
       <div class="static col-span-2">
         <h2 class="py-4">Top categories</h2>
+        <ul class="row grid grid-cols-3 gap-2">
+          {% for category in categories %}
+            <li class="btn rounded-full">{{ category.name }}</li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
     <div class="static font-lato text-4xl">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
-    <div class="space-x-2"><input class="border-b-4 pt-12" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>    
+    <!-- Subscribe -->
+    <div class="static space-x-2"><input class="border-b-2 pt-12" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>
   </div>
   
 {% endblock %}
