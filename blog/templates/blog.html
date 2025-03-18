@@ -9,8 +9,8 @@
       <!-- blog posts -->
       <div class="static col-span-4">
         <h2 class="py-4">Read my latest blog posts</h2>
-        <div class="row grid grid-cols-2">
-          {% for blog_post in blog_posts %}
+        <div class="row grid grid-cols-2 gap-12">
+          {% for blog_post in page_obj %}
             <div class="card bg-base-100 w-96 shadow-sm">
               <figure>
                 <img
@@ -27,16 +27,72 @@
                 </h2>
                 <p>{{blog_post.body | truncatewords:15}}</p>
                 <div class="card-actions justify-end">
-                  <div class="left-100"> Read Article </div>
-                  <a class="left-0 hover:text-green-600" href=" "> &rarr; <span></span></a>
+                  <div class="flex-1"> Read Article </div>
+                  <a class="flex-none hover:text-green-600" href=" "> &rarr;</a>
                 </div>
               </div>
             </div>
-            {% if forloop.counter|divisibleby:2 and not forloop.last %}
-
-            {% endif %}
           {% endfor %}
         </div>
+
+        <!-- Pagination controls -->
+        <nav class="py-4" aria-label="Page navigation">
+          <ul class="pagination justify-self-end step-links">
+            {% if page_obj.has_previous %}
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="?page=1" aria-label="First">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                  <span aria-hidden="true">&lsaquo;</span>
+                </a>
+              </li>
+            {% else %}
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="#" aria-label="First">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&lsaquo;</span>
+                </a>
+              </li>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+              {% if page_obj.number == num %}
+                <li class="page-item btn btn-active btn-circle bg-green-600"><a class="page-link" href="#">{{ num }}</a></li>
+              {% elif num > page_obj.number|add:-3 and num < page_obj.number|add:3 %}
+                <li class="page-item btn btn-circle"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                  <span aria-hidden="true">&rsaquo;</span>
+                </a>
+              </li>
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            {% else %}
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&rsaquo;</span>
+                </a>
+              </li>
+              <li class="page-item btn btn-circle">
+                <a class="page-link" href="#" aria-label="Last">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>           
+            {% endif %}
+          </ul>
+        </nav>
       </div>  
 
       <!-- blog categories -->
@@ -44,14 +100,14 @@
         <h2 class="py-4">Top categories</h2>
         <ul class="row grid grid-cols-3 gap-2">
           {% for category in categories %}
-            <li class="btn rounded-full">{{ category.name }}</li>
+            <li class="btn rounded-full active:bg-green-600">{{ category.name }}</li>
           {% endfor %}
         </ul>
       </div>
     </div>
     <div class="static font-lato text-4xl">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
     <!-- Subscribe -->
-    <div class="static space-x-2"><input class="border-b-2 pt-12" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>
+    <div class="static pt-12"><input class="border-b-2 field-sizing-content pr-4" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>
   </div>
   
 {% endblock %}
