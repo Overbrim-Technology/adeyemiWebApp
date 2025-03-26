@@ -4,7 +4,7 @@
   <div class="relative p-12">
     <div class="static font-lato text-4xl">I don’t just <span class="italic text-green-600">manage</span> your social <br> media presence, I <span class="italic text-green-600">write</span> too</div>
     <!-- blog related content here -->
-    <div class="grid grid-cols-6 gap-8 py-12">
+    <div class="grid grid-cols-6 gap-12 py-12">
 
       <!-- blog posts -->
       <div class="static col-span-4">
@@ -34,28 +34,28 @@
             </div>
           {% endfor %}
         </div>
-
+i$e4pgFNX%Vx
         <!-- Pagination controls -->
-        <nav class="py-4" aria-label="Page navigation">
-          <ul class="pagination justify-self-end step-links">
+        <nav class="pagination py-4" aria-label="Page navigation">
+          <ul class="justify-self-end">
             {% if page_obj.has_previous %}
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="?page=1" aria-label="First">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
                   <span aria-hidden="true">&lsaquo;</span>
                 </a>
               </li>
             {% else %}
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="#" aria-label="First">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="#" aria-label="Previous">
                   <span aria-hidden="true">&lsaquo;</span>
                 </a>
@@ -63,29 +63,29 @@
             {% endif %}
             {% for num in page_obj.paginator.page_range %}
               {% if page_obj.number == num %}
-                <li class="page-item btn btn-active btn-circle bg-green-600"><a class="page-link" href="#">{{ num }}</a></li>
+                <li class="page-item btn btn-active btn-circle bg-green-600 step-links"><a class="page-link" href="#">{{ num }}</a></li>
               {% elif num > page_obj.number|add:-3 and num < page_obj.number|add:3 %}
-                <li class="page-item btn btn-circle"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                <li class="page-item btn btn-circle step-links"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
               {% endif %}
             {% endfor %}
             {% if page_obj.has_next %}
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
                   <span aria-hidden="true">&rsaquo;</span>
                 </a>
               </li>
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>
             {% else %}
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="#" aria-label="Next">
                   <span aria-hidden="true">&rsaquo;</span>
                 </a>
               </li>
-              <li class="page-item btn btn-circle">
+              <li class="page-item btn btn-circle step-links">
                 <a class="page-link" href="#" aria-label="Last">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
@@ -96,7 +96,7 @@
       </div>  
 
       <!-- blog categories -->
-      <div class="static col-span-2">
+      <div class="static col-span-2 pl-8">
         <h2 class="py-4">Top categories</h2>
         <ul class="row grid grid-cols-3 gap-2">
           {% for category in categories %}
