@@ -1887,10 +1887,6 @@ html {
   gap: 0.5rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1959,6 +1955,10 @@ html {
   padding-left: 3rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .pr-12 {
   padding-right: 3rem;
 }
@@ -1967,20 +1967,12 @@ html {
   padding-right: 1rem;
 }
 
-.pr-8 {
-  padding-right: 2rem;
-}
-
 .pt-12 {
   padding-top: 3rem;
 }
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
 }
 
 .font-lato {
