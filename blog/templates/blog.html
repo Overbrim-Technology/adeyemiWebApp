@@ -10,27 +10,29 @@
       <div class="static col-span-4">
         <h2 class="py-4">Read my latest blog posts</h2>
         <div class="row grid grid-cols-2 gap-12">
-          {% for blog_post in page_obj %}
-            <div class="card bg-base-100 w-96 shadow-sm" href="{{ article.get_absolute_url }}">
-              <figure>
-                <img
-                  src="{{blog_post.image}}"
-                  alt="Shoes" />
-              </figure>
-              <div class="card-body">
-                <div>
-                  {{blog_post.created}}
+          {% for article in page_obj %}
+            <div class="card bg-base-100 w-96 shadow-sm">
+              <a href="{{ article.get_absolute_url }}">
+                <figure>
+                  <img
+                    src="{{article.image}}"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <div>
+                    {{article.created}}
+                  </div>
+                  <h2 class="card-title">
+                    {{article.title}}
+                    <div class="badge badge-secondary">NEW</div>
+                  </h2>
+                  <p>{{article.body | truncatewords:15}}</p>
+                  <div class="card-actions justify-end">
+                    <div class="flex-1"> Read Article </div>
+                    <a class="flex-none hover:text-green-600" href="{{ article.get_absolute_url }}"> &rarr;</a>
+                  </div>
                 </div>
-                <h2 class="card-title">
-                  {{blog_post.title}}
-                  <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>{{blog_post.body | truncatewords:15}}</p>
-                <div class="card-actions justify-end">
-                  <div class="flex-1"> Read Article </div>
-                  <a class="flex-none hover:text-green-600" href=" "> &rarr;</a>
-                </div>
-              </div>
+              </a>
             </div>
           {% endfor %}
         </div>
@@ -105,7 +107,8 @@
         </ul>
       </div>
     </div>
-    <div class="static font-lato text-4xl">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
+    
+    <div class="static font-lato text-4xl pt-20">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
     <!-- Subscribe -->
     <div class="static pt-12"><input class="border-b-2 field-sizing-content pr-4" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>
   </div>

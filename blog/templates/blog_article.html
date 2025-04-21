@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="relative">
-        <div class="static"><span class="">Blog</span> &#10093; Article</div>
+    <div class="relative p-12">
+        <div class="static"> <a href="{% url 'blog' %}""><span class="">Blog</span></a>    &#10093;    Article</div>
         <!-- Article Heading -->
         <div class="static card lg:card-side bg-base-100 shadow-sm">
             <div class="card-body">
@@ -15,18 +15,20 @@
                   alt="Article Image" />
             </figure>
         </div>
-        <div class="static card-actions justify-end">
-            <a class="flex-1" href=""> {{article.category}} </a>
-            <div class="flex-none hover:text-green-600"> {{article.date}} </div>
+        <div class="static grid grid-cols-2 py-4 space-x-12 items-end">
+            <a class="hover:text-green-600" href=""> {{article.category}} </a>
+            <div class=""> {{article.created}} </div>
         </div>
         
         <!-- Body -->
-        <div>
-
+        <div class="static py-12 mx-20">
+            <div class="">
+                {{ article.body }}
+            </div>
         </div>
         
         <!-- Subscribe -->
-        <div class="static font-lato text-4xl">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
+        <div class="static font-lato text-4xl pt-20">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
         <div class="static pt-12"><input class="border-b-2 field-sizing-content pr-4" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>
     </div>
 
