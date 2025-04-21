@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="relative">
+        <div class="static"><span class="">Blog</span> &#10093; Article</div>
+        <!-- Article Heading -->
+        <div class="static card lg:card-side bg-base-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title">{{article.title}}</h2>
+              <p>{{article.description}}</p>
+            </div>
+            <figure>
+                <img
+                  src="{{article.image}}"
+                  alt="Article Image" />
+            </figure>
+        </div>
+        <div class="static card-actions justify-end">
+            <a class="flex-1" href=""> {{article.category}} </a>
+            <div class="flex-none hover:text-green-600"> {{article.date}} </div>
+        </div>
+        
+        <!-- Body -->
+        <div>
+
+        </div>
+        
+        <!-- Subscribe -->
+        <div class="static font-lato text-4xl">Want valuable <span class="italic text-green-600">insight</span> on social media trends <br> and lots more</div>
+        <div class="static pt-12"><input class="border-b-2 field-sizing-content pr-4" type="text" placeholder="Drop in your email to subscribe"/><a class="btn bg-green-200 rounded-full">Subscribe</a></div>
+    </div>
+
+
+{% endblock %}
