@@ -13,13 +13,13 @@
 <body>
   <div class="navbar bg-base-100" id="up">
     <div class="flex-1">
-      <a class="btn btn-circle">AO</a>
+      <a class="btn btn-circle" href="{% url 'home' %}">AO</a>
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1 space-x-2">
-        <li><a class="btn rounded-full active:bg-green-600" href="{% url 'home' %}">Portfolio</a></li>
-        <li><a class="btn rounded-full active:bg-green-600" href="{% url 'blog' %}">Blog</a></li>
-        <li><a class="btn rounded-full active:bg-green-600" href="#contact">Contact</a></li>
+        <li><a class="btn btn-outline rounded-full active:bg-green-600" href="{% url 'home' %}">Portfolio</a></li>
+        <li><a class="btn btn-outline rounded-full active:bg-green-600" href="{% url 'blog' %}">Blog</a></li>
+        <li><a class="btn btn-outline rounded-full active:bg-green-600" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>

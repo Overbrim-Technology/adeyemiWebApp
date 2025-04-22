@@ -1,7 +1,133 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
     <div class="relative p-12">
+        <div class="static grid grid-rows-2">
+            <div class="text-3xl">ADEYEMI</div>
+            <div class="grid grid-cols-2">
+                <figure>
+                    <img
+                      src="{% static 'adeyemi.png' %}"
+                      alt="Portfolio Image" />
+                </figure>
+                <div class="grid grid-rows-2 items-start">
+                    <div class="text-3xl">ODUBEKO</div>
+                    <h4>
+                        Creative social media expert passionate about crafting compelling content 
+                        that resonates with the diverse audiences 
+                        of the brands I work with.
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="static pt-12">
+            <a href="mailto:adeyemi@adeyemiodubeko.com">adeyemi@adeyemiodubeko.com</a>
+            <a class="justify-self-end" href=""> &darr; Scroll</a>
+        </div>
+
+        <!-- About Me -->
+        <div class="static pt-20">
+            <div class="grid grid-cols-2">
+                <h1>ABOUT ME</h1>
+                <p>
+                    With over 8 years of experience in social media management, 
+                    I specialize in creating and executing strategies that elevate brand presence and engagement. 
+                    My background in journalism, video editing, and copywriting 
+                    equips me with a unique skill set to craft compelling content that resonates with diverse audiences.
+    
+                    Passionate about leveraging my strong communication skills to 
+                    drive company and brand’s growth, I excel at managing real-time interactions 
+                    and producing high-quality content across various platforms. 
+                    I am dedicated to continuous learning and adapting to emerging technologies 
+                    to ensure impactful and innovative social media campaigns.
+                </p>
+    
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="static pt-20">
+            <h1>THINGS I CAN HELP YOU WITH</h1>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="coaching"/>
+                <div class="collapse-title font-semibold">Coaching</div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="content-creation"/>
+                <div class="collapse-title font-semibold">Content creation</div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="video-editing" />
+                <div class="collapse-title font-semibold">Video editing</div>
+                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="email-marketing" />
+                <div class="collapse-title font-semibold">Email marketing</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+            </div>
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="blogging" />
+                <div class="collapse-title font-semibold">Blogging</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+            </div>
+
+        </div>
         
+        <!-- Technologies -->
+        <div class="static pt-20">
+            <h1>TOOLS I WORK WITH</h1>
+            <div class="grid grid-cols-2 grid-rows-2">
+                <figure>
+                    <img
+                        src="{% static 'metri.png' %}"
+                        alt="Metricool" />
+                </figure>
+                <figure>
+                    <img
+                        src="{% static 'canva.png' %}"
+                        alt="Canva" />
+                </figure>
+                <figure>
+                    <img
+                        src="{% static 'aftereffect.png' %}"
+                        alt="After Effect" />
+                </figure>
+                <figure>
+                    <img
+                        src="{% static 'adobepro.png' %}"
+                        alt="Adobe Premiere Pro" />
+                </figure>
+            </div>
+        </div>
+        
+        <!-- Platforms -->
+        <div class="static pt-20">
+            <figure>
+                <img
+                  src="{% static 'platforms.png' %}"
+                  alt="Platforms" />
+            </figure>
+        </div>
+
+        <!-- Socials -->
+        <div class="static grid grid-cols-3">
+            <button class="btn btn-outline rounded-full active:bg-green-600">Socials</button>
+            <figure>
+                <img
+                  src="{% static 'instagram-1x.png' %}"
+                  alt="Instagram" />
+            </figure>
+            <figure>
+                <img
+                  src="{% static 'linkedin-1x.png' %}"
+                  alt="LinkedIn" />
+            </figure>
+
+        </div>
     </div>
 {% endblock %}

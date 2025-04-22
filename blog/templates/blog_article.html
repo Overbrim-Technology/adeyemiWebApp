@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="relative p-12">
-        <div class="static"> <a href="{% url 'blog' %}">Blog</a>    &#10093;    <span class="text-green-600">Article</span></div>
+        <div class="static"> <a class="hover:text-green-600" href="{% url 'blog' %}">Blog</a>    &#10093;    <span class="text-green-600">Article</span></div>
         <!-- Article Heading -->
         <div class="static card lg:card-side bg-base-100 shadow-sm">
             <div class="card-body">
@@ -21,7 +21,7 @@
         </div>
         
         <!-- Body -->
-        <div class="static py-12 mx-20">
+        <div class="static py-12 mx-20 px-4">
             <div class="">
                 {{ article.body }}
             </div>
