@@ -2,41 +2,40 @@
 {% load static %}
 {% block content %}
     <div class="relative p-12">
-        <div class="static grid grid-rows-2">
-            <div class="text-3xl">ADEYEMI</div>
-            <div class="grid grid-cols-2">
-                <figure>
-                    <img
-                      src="{% static 'adeyemi.png' %}"
-                      alt="Portfolio Image" />
-                </figure>
-                <div class="grid grid-rows-2 items-start">
-                    <div class="text-3xl">ODUBEKO</div>
-                    <h4>
-                        Creative social media expert passionate about crafting compelling content 
-                        that resonates with the diverse audiences 
-                        of the brands I work with.
-                    </h4>
-                </div>
-            </div>
+        <div class="w-1/3">
+            <h1 class="text-8xl justify-self-start font-medium pb-4">ADEYEMI</h1>
+        </div>
+        <div class="static grid grid-rows-3 grid-cols-3 justify-items-stretch">
+            <figure class="row-span-3 justify-self-start self-start">
+                <img
+                    src="{% static 'adeyemi.png' %}"
+                    alt="Portfolio Image" />
+            </figure>
+            <div class="row-start-1 col-start-2 justify-self-start self-start text-8xl font-medium">ODUBEKO</div>
+            <h4 class="row-start-2 col-start-2 justify-self-start self-start">
+                Creative social media expert passionate about crafting compelling content 
+                that resonates with the diverse audiences 
+                of the brands I work with.
+            </h4>
         </div>
 
         <!-- Contact -->
-        <div class="static pt-12">
-            <a href="mailto:adeyemi@adeyemiodubeko.com">adeyemi@adeyemiodubeko.com</a>
-            <a class="justify-self-end" href=""> &darr; Scroll</a>
+        <div class="static grid grid-cols-2 pt-12">
+            <a class="hover:text-green-600" href="mailto:adeyemi@adeyemiodubeko.com justify-self-start">adeyemi@adeyemiodubeko.com</a>
+            <a class="hover:text-green-600 justify-self-end" href="#skills"> &darr; Scroll</a>
         </div>
 
         <!-- About Me -->
         <div class="static pt-20">
-            <div class="grid grid-cols-2">
-                <h1>ABOUT ME</h1>
-                <p>
+            <div class="grid grid-cols-2 grid-rows-2">
+                <h1 class="text-4xl row-start-1 row-span-2">ABOUT ME</h1>
+                <p class="self-start">
                     With over 8 years of experience in social media management, 
                     I specialize in creating and executing strategies that elevate brand presence and engagement. 
                     My background in journalism, video editing, and copywriting 
                     equips me with a unique skill set to craft compelling content that resonates with diverse audiences.
-    
+                </p>
+                <p class="self-end">
                     Passionate about leveraging my strong communication skills to 
                     drive company and brand’s growth, I excel at managing real-time interactions 
                     and producing high-quality content across various platforms. 
@@ -48,30 +47,30 @@
         </div>
 
         <!-- Skills -->
-        <div class="static pt-20">
-            <h1>THINGS I CAN HELP YOU WITH</h1>
+        <div id="skills" class="static pt-20">
+            <h1 class="text-4xl pb-4">THINGS I CAN HELP YOU WITH</h1>
             <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="coaching"/>
+                <input type="radio" name="skill"/>
                 <div class="collapse-title font-semibold">Coaching</div>
                 <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
             </div>
             <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="content-creation"/>
+                <input type="radio" name="skill"/>
                 <div class="collapse-title font-semibold">Content creation</div>
                 <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
             </div>
             <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="video-editing" />
+                <input type="radio" name="skill" />
                 <div class="collapse-title font-semibold">Video editing</div>
                 <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
             </div>
             <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="email-marketing" />
+                <input type="radio" name="skill" />
                 <div class="collapse-title font-semibold">Email marketing</div>
                 <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
             </div>
             <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="blogging" />
+                <input type="radio" name="skill" />
                 <div class="collapse-title font-semibold">Blogging</div>
                 <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
             </div>
@@ -80,24 +79,24 @@
         
         <!-- Technologies -->
         <div class="static pt-20">
-            <h1>TOOLS I WORK WITH</h1>
+            <h1 class="text-4xl pb-8">TOOLS I WORK WITH</h1>
             <div class="grid grid-cols-2 grid-rows-2">
-                <figure>
+                <figure class="justify-self-end h-1/2 w-1/2">
                     <img
                         src="{% static 'metri.png' %}"
                         alt="Metricool" />
                 </figure>
-                <figure>
+                <figure class="justify-self-start h-1/2 w-1/2">
                     <img
                         src="{% static 'canva.png' %}"
                         alt="Canva" />
                 </figure>
-                <figure>
+                <figure class="justify-self-end h-1/2 w-1/2">
                     <img
                         src="{% static 'aftereffect.png' %}"
                         alt="After Effect" />
                 </figure>
-                <figure>
+                <figure class="justify-self-start h-1/2 w-1/2">
                     <img
                         src="{% static 'adobepro.png' %}"
                         alt="Adobe Premiere Pro" />
@@ -107,27 +106,54 @@
         
         <!-- Platforms -->
         <div class="static pt-20">
-            <figure>
+            <h1 class="text-4xl pb-8">PLATFORMS I MANAGE</h1>
+            <figure class="place-self-center h-1/2 w-1/2">
                 <img
                   src="{% static 'platforms.png' %}"
-                  alt="Platforms" />
+                  alt="Platforms"/>
             </figure>
         </div>
 
-        <!-- Socials -->
-        <div class="static grid grid-cols-3">
-            <button class="btn btn-outline rounded-full active:bg-green-600">Socials</button>
-            <figure>
-                <img
-                  src="{% static 'instagram-1x.png' %}"
-                  alt="Instagram" />
-            </figure>
-            <figure>
-                <img
-                  src="{% static 'linkedin-1x.png' %}"
-                  alt="LinkedIn" />
-            </figure>
+        <!-- Recommendation -->
+        <div class="static pt-20">
+            <div class="bg-green-200 m-4 p-4">
+                <div class="max-w-md mx-auto text-center">
+                    <p class="">
+                        “Adeyemi Odubeko provides relevant ideas and concepts and is able to articulate words 
+                        impressively and he has significantly boosted our engagement and follower growth.”
+                    </p>
+                    <p class="text-xs font-medium pt-4">
+                        Rotimi Olasehinde
+                    </p>
+                    <P class="text-xs pt-2 pb-6"> CEO at Shaphan Media</P>
+                </div>
+            </div>
+        </div>
+        
 
+        <!-- Contact -->
+        <div id="contact" class="static pt-16">
+            <h1 class="text-4xl">WANT TO WORK TOGETHER?</h1>
+            <a class="pt-8 hover:text-green-600" href="mailto:adeyemi@adeyemiodubeko.com justify-self-start">adeyemi@adeyemiodubeko.com &#129125;</a>
+        </div>
+
+        <!-- Socials -->
+        <div class="static flex gap-2 items-center pt-16">
+            <div class="outline p-3 rounded-full col-start-1 col-span-2">Socials</div>
+            <a href="">
+                <figure class="inline-flex">
+                    <img
+                        src="{% static 'instagram-1x.png' %}"
+                        alt="Instagram" />
+                </figure>
+            </a>
+            <a href="">
+                <figure class="inline-flex">
+                    <img
+                        src="{% static 'linkedin-1x.png' %}"
+                        alt="LinkedIn" />
+                </figure>
+            </a>
         </div>
     </div>
 {% endblock %}
