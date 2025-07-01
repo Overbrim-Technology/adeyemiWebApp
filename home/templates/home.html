@@ -3,16 +3,16 @@
 {% block content %}
     <div class="relative p-12">
         <div class="w-1/3">
-            <h1 class="text-8xl justify-self-start font-medium pb-4">ADEYEMI</h1>
+            <h1 class="text-8xl justify-self-start font-medium pb-4 animate-slideInUp">ADEYEMI</h1>
         </div>
         <div class="static grid grid-rows-3 grid-cols-3 justify-items-stretch">
-            <figure class="row-span-3 justify-self-start self-start">
+            <figure class="row-span-3 justify-self-start self-start animate-slideInLeft">
                 <img
                     src="{% static 'adeyemi.png' %}"
                     alt="Portfolio Image" />
             </figure>
-            <div class="row-start-1 col-start-2 justify-self-start self-start text-8xl font-medium">ODUBEKO</div>
-            <h4 class="row-start-2 col-start-2 justify-self-start self-start">
+            <div class="row-start-1 col-start-2 justify-self-start self-start text-8xl font-medium animate-slideInRight">ODUBEKO</div>
+            <h4 class="row-start-2 col-start-2 justify-self-start self-start animate-slideInRight">
                 Creative social media expert passionate about crafting compelling content 
                 that resonates with the diverse audiences 
                 of the brands I work with.
@@ -22,20 +22,20 @@
         <!-- Contact -->
         <div class="static grid grid-cols-2 pt-12">
             <a class="hover:text-green-600" href="mailto:adeyemi@adeyemiodubeko.com">adeyemi@adeyemiodubeko.com</a>
-            <a class="hover:text-green-600 justify-self-end" href="#skills"> &darr; Scroll</a>
+            <a class="hover:text-green-600 justify-self-end animate-bounce" href="#skills"> &darr; Scroll</a>
         </div>
 
         <!-- About Me -->
         <div class="static pt-20">
             <div class="grid grid-cols-2 grid-rows-2">
-                <h1 class="text-4xl row-start-1 row-span-2">ABOUT ME</h1>
-                <p class="self-start">
+                <h1 class="text-4xl row-start-1 row-span-2 opacity-0 transition-opacity duration-700" data-animate="slideInLeft">ABOUT ME</h1>
+                <p class="self-start opacity-0 transition-opacity duration-700" data-animate="slideInRight">
                     With over 8 years of experience in social media management, 
                     I specialize in creating and executing strategies that elevate brand presence and engagement. 
                     My background in journalism, video editing, and copywriting 
                     equips me with a unique skill set to craft compelling content that resonates with diverse audiences.
                 </p>
-                <p class="self-end">
+                <p class="self-end opacity-0 transition-opacity duration-700" data-animate="slideInRight">
                     Passionate about leveraging my strong communication skills to 
                     drive company and brand’s growth, I excel at managing real-time interactions 
                     and producing high-quality content across various platforms. 
@@ -74,29 +74,60 @@
                 <div class="collapse-title font-semibold">Blogging</div>
                 <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
             </div>
-
         </div>
         
+        <!-- MY WORK -->
+        <div id="my-work" class="static pt-20">
+            <h1 class="text-4xl pb-8">MY WORK</h1>
+            <div class="grid grid-cols-3 gap-2">
+                <a class="btn btn-outline rounded-full tab-btn bg-green-600 text-white hover:bg-green-600 px-4 py-2" data-target="section1">Video editing</a>
+                <a class="btn btn-outline rounded-full tab-btn hover:bg-green-600 px-4 py-2" data-target="section2">Content creation</a>
+            </div>
+            <div id="section1" class="opacity-100 transition duration-500">
+                <p>Crafting informational, educational, and inspiring content that engages and inspires audiences.</p>
+                <div class="grid grid-cols-2 grid-rows-1 gap-4 pt-4 place-self-center">
+                    <a class= "h-1/2 w-1/2 justify-self-end" href="https://www.instagram.com/p/DHEGTBCMhlR/" target="_blank" rel="noopener noreferrer">
+                        <img
+                        src="{% static 'content-creation-1.png' %}"
+                        alt="Did You Know Who David Was?" />
+                    </a>
+                    <a class= "h-1/2 w-1/2 justify-self-start" href="https://www.instagram.com/p/DBJyd1TNxqf/" target="_blank" rel="noopener noreferrer">
+                        <img
+                        src="{% static 'content-creation-2.png' %}"
+                        alt="Did You Know The Creation Story?"/>
+                    </a>
+                </div>
+            </div>
+
+            <div id="section2" class="tab-content hidden opacity-0 transition duration-500">
+                <p>I am a creative content creator passionately transforming ideas into engaging digital experiences.
+                Packaging compelling value-driven content for my audience, 
+                also building strong personal brands, businesses, and online communities generated from increased brand awareness, lead generation, and sales. 
+                Here are a few works i have done:</p>
+                
+            </div>
+        </div>
+
         <!-- Technologies -->
         <div class="static pt-20">
             <h1 class="text-4xl pb-8">TOOLS I WORK WITH</h1>
             <div class="grid grid-cols-2 grid-rows-2">
-                <figure class="justify-self-end h-1/2 w-1/2">
+                <figure class="justify-self-end h-1/2 w-1/2 hover:animate-pulseFocus">
                     <img
                         src="{% static 'metri.png' %}"
                         alt="Metricool" />
                 </figure>
-                <figure class="justify-self-start h-1/2 w-1/2">
+                <figure class="justify-self-start h-1/2 w-1/2 hover:animate-pulseFocus">
                     <img
                         src="{% static 'canva.png' %}"
                         alt="Canva" />
                 </figure>
-                <figure class="justify-self-end h-1/2 w-1/2">
+                <figure class="justify-self-end h-1/2 w-1/2 hover:animate-pulseFocus">
                     <img
                         src="{% static 'aftereffect.png' %}"
                         alt="After Effect" />
                 </figure>
-                <figure class="justify-self-start h-1/2 w-1/2">
+                <figure class="justify-self-start h-1/2 w-1/2 hover:animate-pulseFocus">
                     <img
                         src="{% static 'adobepro.png' %}"
                         alt="Adobe Premiere Pro" />
@@ -107,7 +138,7 @@
         <!-- Platforms -->
         <div class="static pt-20">
             <h1 class="text-4xl pb-8">PLATFORMS I MANAGE</h1>
-            <figure class="place-self-center h-1/2 w-1/2">
+            <figure class="place-self-center h-1/2 w-1/2 hover:animate-shakeX">
                 <img
                   src="{% static 'platforms.png' %}"
                   alt="Platforms"/>
@@ -156,4 +187,60 @@
             </a>
         </div>
     </div>
+    <script>
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const anim = el.getAttribute('data-animate');
+                el.classList.add('animate-' + anim, 'opacity-100');
+                el.classList.remove('opacity-0');
+                observer.unobserve(el); // Optional: Remove observer after animation
+            }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% is visible
+        });
+
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+
+        // Tab functionality
+        const buttons = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.tab-content');
+        let activeId = null;
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            if (targetId === activeId) return; // Don't reprocess same section
+
+            // Animate out current visible section
+            sections.forEach(section => {
+                section.classList.remove('opacity-100');
+                if (!section.classList.contains('hidden')) {
+                section.classList.add('opacity-0');
+                setTimeout(() => section.classList.add('hidden'), 500);
+                }
+            });
+
+            // Animate in the target section
+            const target = document.getElementById(targetId);
+            setTimeout(() => {
+                target.classList.remove('hidden');
+                target.classList.remove('opacity-0');
+                target.classList.add('opacity-100');
+            }, 500);
+
+            // Update active button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-green-600', 'text-white');
+            });
+
+            button.classList.add('bg-green-600', 'text-white');
+            });
+        });
+    </script>
+
 {% endblock %}
