@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div class="relative p-12">
-        <div class="w-1/3">
-            <h1 class="text-8xl justify-self-start font-medium pb-4 animate-slideInUp">ADEYEMI</h1>
+    <div class="relative p-4 sm:p-8 md:p-12">
+        <div class="w-full md:w-1/3">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-medium pb-4 animate-slideInUp">ADEYEMI</h1>
         </div>
-        <div class="static grid grid-rows-3 grid-cols-3 justify-items-stretch">
-            <figure class="row-span-3 justify-self-start self-start animate-slideInLeft">
+        <div class="grid grid-cols-3 grid-rows-3 gap-4">
+            <figure class="row-start-1 row-span-2 col-start-1 md:row-span-3 justify-self-start md:justify-self-start self-start animate-slideInLeft">
                 <img
+                    class="w-40 sm:w-56 md:w-full h-auto"
                     src="{% static 'adeyemi.png' %}"
                     alt="Portfolio Image" />
             </figure>
-            <div class="row-start-1 col-start-2 justify-self-start self-start text-8xl font-medium animate-slideInRight">ODUBEKO</div>
-            <h4 class="row-start-2 col-start-2 justify-self-start self-start animate-slideInRight">
+            <div class="row-start-1 col-start-2 md:col-start-2 justify-self-start md:justify-self-start self-start text-4xl sm:text-6xl md:text-8xl font-medium animate-slideInRight">ODUBEKO</div>
+            <h4 class="row-start-3 md:row-start-2 col-start-1 md:col-start-2 col-span-3 justify-self-start md:justify-self-start self-start animate-slideInRight text-base sm:text-lg md:text-xl">
                 Creative social media expert passionate about crafting compelling content 
                 that resonates with the diverse audiences 
                 of the brands I work with.
@@ -20,35 +21,35 @@
         </div>
 
         <!-- Contact -->
-        <div class="static grid grid-cols-2 pt-12">
-            <a class="hover:text-green-600" href="mailto:adeyemi@adeyemiodubeko.com">adeyemi@adeyemiodubeko.com</a>
-            <a class="hover:text-green-600 justify-self-end animate-bounce" href="#skills"> &darr; Scroll</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 pt-8 md:pt-12 gap-2">
+            <a class="hover:text-green-600 text-sm sm:text-base" href="mailto:adeyemi@adeyemiodubeko.com">adeyemi@adeyemiodubeko.com</a>
+            <a class="hover:text-green-600 justify-self-start md:justify-self-end animate-bounce text-sm sm:text-base" href="#skills"> &darr; Scroll</a>
         </div>
 
         <!-- About Me -->
-        <div class="static pt-20">
-            <div class="grid grid-cols-2 grid-rows-2">
-                <h1 class="text-4xl row-start-1 row-span-2 opacity-0 transition-opacity duration-700" data-animate="slideInLeft">ABOUT ME</h1>
-                <p class="self-start opacity-0 transition-opacity duration-700" data-animate="slideInRight">
+        <div class="pt-12 md:pt-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl row-start-1 row-span-2 opacity-0 transition-opacity duration-700" data-animate="slideInLeft">ABOUT ME</h1>
+                <p class="self-start opacity-0 transition-opacity duration-700 text-sm sm:text-base" data-animate="slideInRight">
                     With over 8 years of experience in social media management, 
                     I specialize in creating and executing strategies that elevate brand presence and engagement. 
                     My background in journalism, video editing, and copywriting 
                     equips me with a unique skill set to craft compelling content that resonates with diverse audiences.
                 </p>
-                <p class="self-end opacity-0 transition-opacity duration-700" data-animate="slideInRight">
+                <p class="self-end opacity-0 transition-opacity duration-700 text-sm sm:text-base" data-animate="slideInRight">
                     Passionate about leveraging my strong communication skills to 
                     drive company and brand’s growth, I excel at managing real-time interactions 
                     and producing high-quality content across various platforms. 
                     I am dedicated to continuous learning and adapting to emerging technologies 
                     to ensure impactful and innovative social media campaigns.
                 </p>
-    
             </div>
         </div>
 
+
         <!-- Skills -->
         <div id="skills" class="static pt-20">
-            <h1 class="text-4xl pb-4">THINGS I CAN HELP YOU WITH</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl row-start-1 row-span-2 pb-4">THINGS I CAN HELP YOU WITH</h1>
             <div class="collapse collapse-plus bg-base-100 border border-base-300">
                 <input type="radio" name="skill"/>
                 <div class="collapse-title font-semibold">Coaching</div>
@@ -78,12 +79,12 @@
         
         <!-- MY WORK -->
         <div id="my-work" class="static pt-20">
-            <h1 class="text-4xl pb-8">MY WORK</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl row-start-1 row-span-2 pb-8">MY WORK</h1>
             <div class="grid grid-cols-3 gap-2">
                 <a class="btn btn-outline rounded-full tab-btn bg-green-600 text-white hover:bg-green-600 px-4 py-2" data-target="section1">Video editing</a>
                 <a class="btn btn-outline rounded-full tab-btn hover:bg-green-600 px-4 py-2" data-target="section2">Content creation</a>
             </div>
-            <div id="section1" class="opacity-100 transition duration-500">
+            <div id="section1" class="text-xs md:text-sm lg:text-md opacity-100 transition duration-500">
                 <p>I approach content creation as both an art and a strategy — crafting text, images, audio, and video that not only capture attention 
                     but deliver real value. For me, it’s more than just producing content; it’s about using creativity and purpose to inform, engage, and inspire. 
                     Whether you're telling a story, promoting your brand, or educating your audience, I focus on creating content that sparks connection and drives action.</p>
@@ -101,7 +102,7 @@
                 </div>
             </div>
 
-            <div id="section2" class="tab-content hidden opacity-0 transition duration-500">
+            <div id="section2" class="tab-content text-xs md:text-sm lg:text-md hidden opacity-0 transition duration-500">
                 <p>I am a creative content creator passionately transforming ideas into engaging digital experiences.
                 Packaging compelling value-driven content for my audience, 
                 also building strong personal brands, businesses, and online communities generated from increased brand awareness, lead generation, and sales. 
@@ -112,7 +113,7 @@
 
         <!-- Technologies -->
         <div class="static pt-20">
-            <h1 class="text-4xl pb-8">TOOLS I WORK WITH</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl row-start-1 row-span-2 pb-8">TOOLS I WORK WITH</h1>
             <div class="grid grid-cols-2 grid-rows-2">
                 <figure class="justify-self-end h-1/2 w-1/2 hover:animate-pulseFocus">
                     <img
@@ -139,7 +140,7 @@
         
         <!-- Platforms -->
         <div class="static pt-20">
-            <h1 class="text-4xl pb-8">PLATFORMS I MANAGE</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl row-start-1 row-span-2 pb-8">PLATFORMS I MANAGE</h1>
             <figure class="place-self-center h-1/2 w-1/2 hover:animate-shakeX">
                 <img
                   src="{% static 'platforms.png' %}"
@@ -151,14 +152,14 @@
         <div class="static pt-20">
             <div class="bg-green-200 m-4 p-4">
                 <div class="max-w-md mx-auto text-center">
-                    <p class="">
+                    <p class="text-xs md:text-sm lg:text-md">
                         “Adeyemi Odubeko provides relevant ideas and concepts and is able to articulate words 
                         impressively and he has significantly boosted our engagement and follower growth.”
                     </p>
-                    <p class="text-xs font-medium pt-4">
+                    <p class="text-2xs md:text-xs lg:text-sm font-medium pt-4">
                         Rotimi Olasehinde
                     </p>
-                    <P class="text-xs pt-2 pb-6"> CEO at Shaphan Media</P>
+                    <P class="text-2xs md:text-xs lg:text-sm pt-2 pb-6"> CEO at Shaphan Media</P>
                 </div>
             </div>
         </div>
@@ -166,7 +167,7 @@
 
         <!-- Contact -->
         <div id="contact" class="static pt-16">
-            <h1 class="text-4xl">WANT TO WORK TOGETHER?</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl row-start-1 row-span-2">WANT TO WORK TOGETHER?</h1>
             <a class="pt-8 hover:text-green-600" href="mailto:adeyemi@adeyemiodubeko.com">adeyemi@adeyemiodubeko.com &#129125;</a>
         </div>
 

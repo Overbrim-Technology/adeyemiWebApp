@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '2xs': '0.625rem', // 10px
+        '3xs': '0.5rem', // 8px
+        '4xs': '0.375rem', // 6px
+        '5xs': '0.25rem', // 4px
+      },
       fontFamily: {
         haus: ['At Hauss', 'sans-serif'],
         lato: ['Lato', 'sans-serif']

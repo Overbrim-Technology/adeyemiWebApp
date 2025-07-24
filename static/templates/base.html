@@ -13,13 +13,13 @@
 <body>
   <div class="navbar bg-base-100" id="up">
     <div class="flex-1">
-      <a class="btn btn-circle hover:bg-green-600 bg-green-600 text-white" href="{% url 'home' %}">AO</a>
+      <a class="btn btn-circle text-xs md:text-sm lg:text-md hover:bg-green-600 bg-green-600 text-white" href="{% url 'home' %}">AO</a>
     </div>
-    <div class="flex-none">
+    <div class="flex-none ">
       <ul class="menu menu-horizontal px-1 space-x-2">
-        <li><a class="btn btn-outline rounded-full hover:bg-green-600 {% if request.path == '/' %}bg-green-600 text-white{% else %}bg-transparent text-gray-700{% endif %}" href="{% url 'home' %}">Portfolio</a></li>
-        <li><a class="btn btn-outline rounded-full hover:bg-green-600 {% if request.path == '/blog/' %}bg-green-600 text-white{% else %}bg-transparent text-gray-700{% endif %}" href="{% url 'blog' %}">Blog</a></li>
-        <li><a class="btn btn-outline rounded-full hover:bg-green-600" href="#contact">Contact</a></li>
+        <li><a class="btn btn-outline text-xs md:text-sm lg:text-md rounded-full hover:bg-green-600 {% if request.path == '/' %}bg-green-600 text-white{% else %}bg-transparent text-gray-700{% endif %}" href="{% url 'home' %}">Portfolio</a></li>
+        <li><a class="btn btn-outline text-xs md:text-sm lg:text-md rounded-full hover:bg-green-600 {% if request.path == '/blog/' %}bg-green-600 text-white{% else %}bg-transparent text-gray-700{% endif %}" href="{% url 'blog' %}">Blog</a></li>
+        <li><a class="btn btn-outline text-xs md:text-sm lg:text-md rounded-full hover:bg-green-600" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
